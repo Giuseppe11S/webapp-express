@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "node": "^25.1.0"
+  },
+  "name": "webapp-express",
+  "version": "1.0.0",
+  "description": "Api with movies and reviews",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node start"
+  },
+  "author": "Giuseppe11S",
+  "license": "ISC"
+}
