@@ -1,14 +1,15 @@
 {
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.15.3",
     "node": "^25.1.0"
   },
   "name": "webapp-express",
   "version": "1.0.0",
   "description": "Api with movies and reviews",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "test",
     "start": "node app.js"
