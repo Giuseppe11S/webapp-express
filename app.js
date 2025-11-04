@@ -7,8 +7,6 @@ const moviesRouter = require('./routing/movies')
 const notFound = require('./middleware/notFound404');
 const errorHandler = require('./middleware/errorHandler');
 
-
-
 app.use(cors());
 
 // parser

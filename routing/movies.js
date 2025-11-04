@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const moviesController = require('../controllers/movieController');
+const movieController = require('../controllers/movieController');
 const cors = require('cors');
-
 
 router.use(cors({
   origin: 'http://localhost:5176'
 }));
 
-router.get('/', moviesController.indexPost);
-router.get('/:id', moviesController.showPost);
+router.get('/', movieController.indexPost);
+router.get('/:id', movieController.showPost);
 
 
 module.exports = router;
