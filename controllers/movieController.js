@@ -51,6 +51,29 @@ const showPost = (req, res) => {
   });
 };
 
-module.exports = {indexPost, showPost};
+// Store reviews
+
+const storePost = (req, res) => {
+  // recupero id 
+  const movie_id = req.params.id;
+  const { name, vote, text } = req.body;
+
+  const storeReSql =
+    "INSERT INTO `reviews` (`name`, `vote`, `text`, `movie_id`) VALUES (?,?,?,?)";
+
+  connection.query(storeReSql, [name, vote, text, movie_id], (err, result) => {
+    if (err) return res.status(500).json({ error: "Non è stato possibile salvare la recensione" });
+     
+    // oggetto in risposta 
+    res.status(201).json({
+
+      id: result.insertId,
+      message: "Review added",
+
+    });
+  }); 
+}; 
+
+module.exports = {indexPost, showPost, storePost};
 
 
